@@ -459,7 +459,7 @@ Given these advantages, the sharing and reusing of video research data in educat
 
 Despite the importance of this issue, there is limited understanding of the reasons behind the underdevelopment of sharing and reusing video research data in education. Existing investigations primarily focus on research data as a whole and only partially address the specific challenges related to video data. Additionally, the literature on video research data is scattered across various publication outlets, lacking a comprehensive and systematic examination of the barriers and facilitators of sharing and reusing video research data in education.
 
-To address this gap, we propose conducting a systematic review to identify and categorize the factors that contribute to the sharing or reusing of video research data in education. We will situate these factors within a "research ecosystem" framework (European Commission, 2018, p. 10), which encompasses the scientific community's context (e.g. incentives, norms, policies of scientific societies), available infrastructure (e.g. discipline specific data centers), the researchers themselves (e.g. awareness, skills), and their video research data (e.g. study design, vulnerable sample; see Fig. 1). By undertaking this review, we aim to enhance awareness and understanding of these factors, ultimately reducing barriers and expanding facilitators for sharing and reusing video research data in education.
+To address this gap, we conduct a systematic review to identify and categorize the factors that contribute to the sharing or reusing of video research data in education. We will situate these factors within a "research ecosystem" framework (European Commission, 2018, p. 10), which encompasses the scientific community's context (e.g. incentives, norms, policies of scientific societies), available infrastructure (e.g. discipline specific data centers), the researchers themselves (e.g. awareness, skills), and their video research data (e.g. study design, vulnerable sample; see Fig. 1). By undertaking this review, we aim to enhance awareness and understanding of these factors, ultimately reducing barriers and expanding facilitators for sharing and reusing video research data in education.
 
 
 ![](www/model.png){width=70%}
@@ -559,11 +559,13 @@ __Inclusion:__
 * Theoretical as well as empirical 
 * Main focus of the document is sharing or reusing research data
 * The document focuses on qualitative data or video data
+* The data includes human subjects
 * The document mentions barriers or facilitators to sharing or reusing research data
 
 __Exclusion:__
 
-* The data does not include human subjects
+* The data includes position data, map data, weather data, business data, ... (not humans)
+* The document focuses government data
 
 
 ### Directives and surveys
@@ -572,11 +574,13 @@ __Inclusion:__
 
 * The document includes statements about sharing or reusing research data
 * These statements concern qualitative data or video data
+* The data includes human subjects
 * The document mentions barriers or facilitators to sharing or reusing research data
 
 __Exclusion:__
 
-* The data does not include human subjects
+* The data includes position data, map data, weather data, business data, ... (not humans)
+* The document focuses government data
 
 ## Sources of Search: List and Rationale
 
