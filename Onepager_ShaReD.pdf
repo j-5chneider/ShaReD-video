@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="ng-csp" data-placeholder-focus="false" lang="de-DE" data-locale="de_DE" >
+	<head
+ data-requesttoken="oIvO1dTWI5nE37dkcONKD0Y1BIVFjbu0vo0oKmCxi64=:1cGsu7O9DMCXp4cyINU+bhBtbfNz/9Hj9ttvRFOaxv8=">
+		<meta charset="utf-8">
+		<title>
+			Nextcloud | EduCS		</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+				<meta name="apple-itunes-app" content="app-id=1125420102">
+				<meta name="theme-color" content="#FAFAFA">
+		<link rel="icon" href="/core/img/favicon.ico">
+		<link rel="apple-touch-icon" href="/core/img/favicon-touch.png">
+		<link rel="mask-icon" sizes="any" href="/core/img/favicon-mask.svg" color="#FAFAFA">
+		<link rel="manifest" href="/core/img/manifest.json">
+		<link rel="stylesheet" href="/core/css/server.css?v=acb821f1-12">
+<link rel="stylesheet" href="/core/css/styles.css?v=acb821f1-12">
+<link rel="stylesheet" href="/core/css/header.css?v=acb821f1-12">
+<link rel="stylesheet" href="/apps/theming/css/default.css?v=9db53190-12">
+<link rel="stylesheet" href="/core/css/guest.css?v=acb821f1-12">
+		<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/dist/core-common.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/dist/core-main.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/core/l10n/de_DE.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/dist/core-files_fileinfo.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/dist/core-files_client.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/js/core/merged-template-prepend.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/apps/comments/l10n/de_DE.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/dist/comments-comments-app.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/apps/files_sharing/l10n/de_DE.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=" defer src="/dist/files_sharing-main.js?v=acb821f1-12"></script>
+<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=">
+var _oc_debug=false;
+var _oc_isadmin=false;
+var backendAllowsPasswordConfirmation=true;
+var oc_dataURL=false;
+var _oc_webroot="";
+var _oc_appswebroots={"activity":"/apps/activity","admin_audit":"/apps/admin_audit","announcementcenter":"/apps/announcementcenter","bruteforcesettings":"/apps/bruteforcesettings","calendar":"/apps/calendar","circles":"/apps/circles","cloud_federation_api":"/apps/cloud_federation_api","comments":"/apps/comments","contacts":"/apps/contacts","contactsinteraction":"/apps/contactsinteraction","dashboard":"/apps/dashboard","dav":"/apps/dav","federatedfilesharing":"/apps/federatedfilesharing","federation":"/apps/federation","files":"/apps/files","files_antivirus":"/apps/files_antivirus","files_pdfviewer":"/apps/files_pdfviewer","files_rightclick":"/apps/files_rightclick","files_sharing":"/apps/files_sharing","files_trashbin":"/apps/files_trashbin","files_versions":"/apps/files_versions","firstrunwizard":"/apps/firstrunwizard","groupfolders":"/apps/groupfolders","impersonate":"/apps/impersonate","logreader":"/apps/logreader","lookup_server_connector":"/apps/lookup_server_connector","nextcloud_announcements":"/apps/nextcloud_announcements","notifications":"/apps/notifications","oauth2":"/apps/oauth2","password_policy":"/apps/password_policy","photos":"/apps/photos","privacy":"/apps/privacy","provisioning_api":"/apps/provisioning_api","recommendations":"/apps/recommendations","related_resources":"/apps/related_resources","richdocuments":"/apps/richdocuments","richdocumentscode":"/apps/richdocumentscode","serverinfo":"/apps/serverinfo","settings":"/apps/settings","sharebymail":"/apps/sharebymail","support":"/apps/support","survey_client":"/apps/survey_client","suspicious_login":"/apps/suspicious_login","systemtags":"/apps/systemtags","text":"/apps/text","theming":"/apps/theming","theming_customcss":"/apps/theming_customcss","twofactor_backupcodes":"/apps/twofactor_backupcodes","updatenotification":"/apps/updatenotification","user_ldap":"/apps/user_ldap","user_status":"/apps/user_status","viewer":"/apps/viewer","weather_status":"/apps/weather_status","workflowengine":"/apps/workflowengine"};
+var datepickerFormatDate="dd.MM.yy";
+var nc_lastLogin=0;
+var nc_pageLoad=1687942966;
+var dayNames=["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+var dayNamesShort=["Son.","Mon.","Die.","Mit.","Don.","Fre.","Sam."];
+var dayNamesMin=["So","Mo","Di","Mi","Do","Fr","Sa"];
+var monthNames=["Januar","Februar","M\u00e4rz","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+var monthNamesShort=["Jan.","Feb.","M\u00e4r.","Apr.","Mai","Jun.","Jul.","Aug.","Sep.","Okt.","Nov.","Dez."];
+var firstDay=1;
+var _oc_config={"auto_logout":false,"blacklist_files_regex":"\\.(part|filepart)$","loglevel":2,"lost_password_link":"disabled","modRewriteWorking":true,"no_unsupported_browser_warning":false,"session_keepalive":true,"session_lifetime":1440,"sharing.maxAutocompleteResults":25,"sharing.minSearchStringLength":0,"version":"26.0.3.2","versionstring":"26.0.3"};
+var oc_appconfig={"core":{"defaultExpireDateEnabled":false,"defaultExpireDate":null,"defaultExpireDateEnforced":null,"enforcePasswordForPublicLink":false,"enableLinkPasswordByDefault":false,"sharingDisabledForUser":false,"resharingAllowed":true,"remoteShareAllowed":true,"federatedCloudShareDoc":"https:\/\/docs.nextcloud.com\/server\/26\/go.php?to=user-sharing-federated","allowGroupSharing":true,"defaultInternalExpireDateEnabled":false,"defaultInternalExpireDate":null,"defaultInternalExpireDateEnforced":null,"defaultRemoteExpireDateEnabled":false,"defaultRemoteExpireDate":null,"defaultRemoteExpireDateEnforced":null},"files":{"max_chunk_size":10485760}};
+var _theme={"entity":"Nextcloud | EduCS","name":"Nextcloud | EduCS","productName":"Nextcloud","title":"Nextcloud | EduCS","baseUrl":"https:\/\/www.dipf.de","syncClientUrl":"https:\/\/nextcloud.com\/install\/#install-clients","docBaseUrl":"https:\/\/docs.nextcloud.com","docPlaceholderUrl":"https:\/\/docs.nextcloud.com\/server\/26\/go.php?to=PLACEHOLDER","slogan":"ein sicherer Ort f\u00fcr all Ihre Daten","logoClaim":"","folder":"dipf"};
+
+</script>
+			</head>
+	<body id="body-login">
+		<noscript>
+	<div id="nojavascript">
+		<div>
+			Diese Anwendung benötigt JavaScript zum ordnungsgemäßen Betrieb. Bitte <a href="https://www.enable-javascript.com/" target="_blank" rel="noreferrer noopener">aktivieren Sie JavaScript</a> und laden Sie die Seite neu.		</div>
+	</div>
+</noscript>
+					<input type="hidden" id="initial-state-comments-max-message-length" value="MTAwMA==">
+					<input type="hidden" id="initial-state-comments-maxAutoCompleteResults" value="MTA=">
+					<input type="hidden" id="initial-state-core-projects_enabled" value="ZmFsc2U=">
+					<input type="hidden" id="initial-state-core-config" value="eyJhdXRvX2xvZ291dCI6ZmFsc2UsImJsYWNrbGlzdF9maWxlc19yZWdleCI6IlxcLihwYXJ0fGZpbGVwYXJ0KSQiLCJsb2dsZXZlbCI6MiwibG9zdF9wYXNzd29yZF9saW5rIjoiZGlzYWJsZWQiLCJtb2RSZXdyaXRlV29ya2luZyI6dHJ1ZSwibm9fdW5zdXBwb3J0ZWRfYnJvd3Nlcl93YXJuaW5nIjpmYWxzZSwic2Vzc2lvbl9rZWVwYWxpdmUiOnRydWUsInNlc3Npb25fbGlmZXRpbWUiOjE0NDAsInNoYXJpbmcubWF4QXV0b2NvbXBsZXRlUmVzdWx0cyI6MjUsInNoYXJpbmcubWluU2VhcmNoU3RyaW5nTGVuZ3RoIjowLCJ2ZXJzaW9uIjoiMjYuMC4zLjIiLCJ2ZXJzaW9uc3RyaW5nIjoiMjYuMC4zIn0=">
+					<input type="hidden" id="initial-state-core-capabilities" value="eyJjb3JlIjp7InBvbGxpbnRlcnZhbCI6NjAsIndlYmRhdi1yb290IjoicmVtb3RlLnBocFwvd2ViZGF2IiwicmVmZXJlbmNlLWFwaSI6dHJ1ZSwicmVmZXJlbmNlLXJlZ2V4IjoiKFxcc3xcXG58XikoaHR0cHM/OlxcXC9cXFwvKSgoPzpbLUEtWjAtOStfXStcXC4pK1stQS1aXSsoPzpcXFwvWy1BLVowLTkrJkAjJT89fl98ITosLjsoKV0qKSopKFxcc3xcXG58JCkifSwibWV0YWRhdGFBdmFpbGFibGUiOnsic2l6ZSI6WyJcL2ltYWdlXFxcLy4qXC8iXSwiZ3BzIjpbIlwvaW1hZ2VcXFwvLipcLyJdfSwiZmlsZXMiOnsiYmlnZmlsZWNodW5raW5nIjp0cnVlLCJibGFja2xpc3RlZF9maWxlcyI6WyIuaHRhY2Nlc3MiLCJUaHVtYnMuZGIiLCJ0aHVtYnMuZGIiXSwiY29tbWVudHMiOnRydWUsInVuZGVsZXRlIjp0cnVlLCJ2ZXJzaW9uaW5nIjp0cnVlLCJ2ZXJzaW9uX2xhYmVsaW5nIjpmYWxzZSwidmVyc2lvbl9kZWxldGlvbiI6ZmFsc2V9LCJhY3Rpdml0eSI6eyJhcGl2MiI6WyJmaWx0ZXJzIiwiZmlsdGVycy1hcGkiLCJwcmV2aWV3cyIsInJpY2gtc3RyaW5ncyJdfSwiY2lyY2xlcyI6eyJ2ZXJzaW9uIjoiMjYuMC4wIiwic3RhdHVzIjp7Imdsb2JhbFNjYWxlIjpmYWxzZX0sInNldHRpbmdzIjp7ImZyb250ZW5kRW5hYmxlZCI6dHJ1ZSwiYWxsb3dlZENpcmNsZXMiOjI2MjE0MywiYWxsb3dlZFVzZXJUeXBlcyI6MzEsIm1lbWJlcnNMaW1pdCI6LTF9LCJjaXJjbGUiOnsiY29uc3RhbnRzIjp7ImZsYWdzIjp7IjEiOiJFaW56ZWxuIiwiMiI6IlBlcnNcdTAwZjZubGljaCIsIjQiOiJTeXN0ZW0iLCI4IjoiU2ljaHRiYXIiLCIxNiI6Ik9mZmVuIiwiMzIiOiJFaW5sYWRlbiIsIjY0IjoiQmV0cml0dHNhbmZyYWdlIiwiMTI4IjoiRnJldW5kZSIsIjI1NiI6IlBhc3N3b3J0Z2VzY2hcdTAwZmN0enQiLCI1MTIiOiJLZWluIEJlc2l0emVyIiwiMTAyNCI6IlZlcnN0ZWNrdCIsIjIwNDgiOiJCYWNrZW5kIiwiNDA5NiI6Ikxva2FsIiwiODE5MiI6IlJvb3QiLCIxNjM4NCI6IkVpbmxhZHVuZyB6dSBLcmVpcyIsIjMyNzY4IjoiRmVkZXJhdGVkIiwiNjU1MzYiOiJFaW5oXHUwMGU0bmdlcHVua3QifSwic291cmNlIjp7ImNvcmUiOnsiMSI6Ik5leHRjbG91ZC1Lb250byIsIjIiOiJOZXh0Y2xvdWQtR3J1cHBlIiwiNCI6IkUtTWFpbC1BZHJlc3NlIiwiOCI6IktvbnRha3QiLCIxNiI6IktyZWlzIiwiMTAwMDAiOiJOZXh0Y2xvdWQtQXBwIn0sImV4dHJhIjp7IjEwMDAxIjoiQ2lyY2xlcyBBcHAiLCIxMDAwMiI6IkFkbWluIENvbW1hbmQgTGluZSJ9fX0sImNvbmZpZyI6eyJjb3JlRmxhZ3MiOlsxLDIsNF0sInN5c3RlbUZsYWdzIjpbNTEyLDEwMjQsMjA0OF19fSwibWVtYmVyIjp7ImNvbnN0YW50cyI6eyJsZXZlbCI6eyIxIjoiTWl0Z2xpZWQiLCI0IjoiTW9kZXJhdG9yIiwiOCI6IkFkbWluaXN0cmF0aW9uIiwiOSI6IkVpZ2VudFx1MDBmY21lciJ9fSwidHlwZSI6eyIwIjoic2luZ2xlIiwiMSI6InVzZXIiLCIyIjoiZ3JvdXAiLCI0IjoibWFpbCIsIjgiOiJjb250YWN0IiwiMTYiOiJjaXJjbGUiLCIxMDAwMCI6ImFwcCJ9fX0sIm9jbSI6eyJlbmFibGVkIjp0cnVlLCJhcGlWZXJzaW9uIjoiMS4wLXByb3Bvc2FsMSIsImVuZFBvaW50IjoiaHR0cHM6XC9cL2Nsb3VkLmVkdWNzLWhvc3RpbmcubmV0XC9vY20iLCJyZXNvdXJjZVR5cGVzIjpbeyJuYW1lIjoiZmlsZSIsInNoYXJlVHlwZXMiOlsidXNlciIsImdyb3VwIl0sInByb3RvY29scyI6eyJ3ZWJkYXYiOiJcL3B1YmxpYy5waHBcL3dlYmRhdlwvIn19XX0sImRhdiI6eyJjaHVua2luZyI6IjEuMCIsImJ1bGt1cGxvYWQiOiIxLjAifSwiZmlsZXNfc2hhcmluZyI6eyJhcGlfZW5hYmxlZCI6dHJ1ZSwicHVibGljIjp7ImVuYWJsZWQiOnRydWUsInBhc3N3b3JkIjp7ImVuZm9yY2VkIjpmYWxzZSwiYXNrRm9yT3B0aW9uYWxQYXNzd29yZCI6ZmFsc2V9LCJleHBpcmVfZGF0ZSI6eyJlbmFibGVkIjpmYWxzZX0sIm11bHRpcGxlX2xpbmtzIjp0cnVlLCJleHBpcmVfZGF0ZV9pbnRlcm5hbCI6eyJlbmFibGVkIjpmYWxzZX0sImV4cGlyZV9kYXRlX3JlbW90ZSI6eyJlbmFibGVkIjpmYWxzZX0sInNlbmRfbWFpbCI6ZmFsc2UsInVwbG9hZCI6dHJ1ZSwidXBsb2FkX2ZpbGVzX2Ryb3AiOnRydWV9LCJyZXNoYXJpbmciOnRydWUsInVzZXIiOnsic2VuZF9tYWlsIjpmYWxzZSwiZXhwaXJlX2RhdGUiOnsiZW5hYmxlZCI6dHJ1ZX19LCJncm91cF9zaGFyaW5nIjp0cnVlLCJncm91cCI6eyJlbmFibGVkIjp0cnVlLCJleHBpcmVfZGF0ZSI6eyJlbmFibGVkIjp0cnVlfX0sImRlZmF1bHRfcGVybWlzc2lvbnMiOjMxLCJmZWRlcmF0aW9uIjp7Im91dGdvaW5nIjp0cnVlLCJpbmNvbWluZyI6dHJ1ZSwiZXhwaXJlX2RhdGUiOnsiZW5hYmxlZCI6dHJ1ZX0sImV4cGlyZV9kYXRlX3N1cHBvcnRlZCI6eyJlbmFibGVkIjp0cnVlfX0sInNoYXJlZSI6eyJxdWVyeV9sb29rdXBfZGVmYXVsdCI6ZmFsc2UsImFsd2F5c19zaG93X3VuaXF1ZSI6dHJ1ZX0sInNoYXJlYnltYWlsIjp7ImVuYWJsZWQiOnRydWUsInNlbmRfcGFzc3dvcmRfYnlfbWFpbCI6dHJ1ZSwidXBsb2FkX2ZpbGVzX2Ryb3AiOnsiZW5hYmxlZCI6dHJ1ZX0sInBhc3N3b3JkIjp7ImVuYWJsZWQiOnRydWUsImVuZm9yY2VkIjpmYWxzZX0sImV4cGlyZV9kYXRlIjp7ImVuYWJsZWQiOnRydWUsImVuZm9yY2VkIjpmYWxzZX19fSwibm90aWZpY2F0aW9ucyI6eyJvY3MtZW5kcG9pbnRzIjpbImxpc3QiLCJnZXQiLCJkZWxldGUiLCJkZWxldGUtYWxsIiwiaWNvbnMiLCJyaWNoLXN0cmluZ3MiLCJhY3Rpb24td2ViIiwidXNlci1zdGF0dXMiLCJleGlzdHMiXSwicHVzaCI6WyJkZXZpY2VzIiwib2JqZWN0LWRhdGEiLCJkZWxldGUiXSwiYWRtaW4tbm90aWZpY2F0aW9ucyI6WyJvY3MiLCJjbGkiXX0sInBhc3N3b3JkX3BvbGljeSI6eyJtaW5MZW5ndGgiOjEwLCJlbmZvcmNlTm9uQ29tbW9uUGFzc3dvcmQiOnRydWUsImVuZm9yY2VOdW1lcmljQ2hhcmFjdGVycyI6ZmFsc2UsImVuZm9yY2VTcGVjaWFsQ2hhcmFjdGVycyI6ZmFsc2UsImVuZm9yY2VVcHBlckxvd2VyQ2FzZSI6ZmFsc2UsImFwaSI6eyJnZW5lcmF0ZSI6Imh0dHBzOlwvXC9jbG91ZC5lZHVjcy1ob3N0aW5nLm5ldFwvb2NzXC92Mi5waHBcL2FwcHNcL3Bhc3N3b3JkX3BvbGljeVwvYXBpXC92MVwvZ2VuZXJhdGUiLCJ2YWxpZGF0ZSI6Imh0dHBzOlwvXC9jbG91ZC5lZHVjcy1ob3N0aW5nLm5ldFwvb2NzXC92Mi5waHBcL2FwcHNcL3Bhc3N3b3JkX3BvbGljeVwvYXBpXC92MVwvdmFsaWRhdGUifX0sInByb3Zpc2lvbmluZ19hcGkiOnsidmVyc2lvbiI6IjEuMTYuMCIsIkFjY291bnRQcm9wZXJ0eVNjb3Blc1ZlcnNpb24iOjIsIkFjY291bnRQcm9wZXJ0eVNjb3Blc0ZlZGVyYXRlZEVuYWJsZWQiOnRydWUsIkFjY291bnRQcm9wZXJ0eVNjb3Blc1B1Ymxpc2hlZEVuYWJsZWQiOnRydWV9LCJyaWNoZG9jdW1lbnRzIjp7InZlcnNpb24iOiI4LjAuMiIsIm1pbWV0eXBlcyI6WyJhcHBsaWNhdGlvblwvdm5kLm9hc2lzLm9wZW5kb2N1bWVudC50ZXh0IiwiYXBwbGljYXRpb25cL3ZuZC5vYXNpcy5vcGVuZG9jdW1lbnQuc3ByZWFkc2hlZXQiLCJhcHBsaWNhdGlvblwvdm5kLm9hc2lzLm9wZW5kb2N1bWVudC5ncmFwaGljcyIsImFwcGxpY2F0aW9uXC92bmQub2FzaXMub3BlbmRvY3VtZW50LnByZXNlbnRhdGlvbiIsImFwcGxpY2F0aW9uXC92bmQub2FzaXMub3BlbmRvY3VtZW50LnRleHQtZmxhdC14bWwiLCJhcHBsaWNhdGlvblwvdm5kLm9hc2lzLm9wZW5kb2N1bWVudC5zcHJlYWRzaGVldC1mbGF0LXhtbCIsImFwcGxpY2F0aW9uXC92bmQub2FzaXMub3BlbmRvY3VtZW50LmdyYXBoaWNzLWZsYXQteG1sIiwiYXBwbGljYXRpb25cL3ZuZC5vYXNpcy5vcGVuZG9jdW1lbnQucHJlc2VudGF0aW9uLWZsYXQteG1sIiwiYXBwbGljYXRpb25cL3ZuZC5sb3R1cy13b3JkcHJvIiwiYXBwbGljYXRpb25cL3ZuZC52aXNpbyIsImFwcGxpY2F0aW9uXC92bmQubXMtdmlzaW8uZHJhd2luZyIsImFwcGxpY2F0aW9uXC92bmQud29yZHBlcmZlY3QiLCJhcHBsaWNhdGlvblwvbXNvbmVub3RlIiwiYXBwbGljYXRpb25cL21zd29yZCIsImFwcGxpY2F0aW9uXC9ydGYiLCJ0ZXh0XC9ydGYiLCJhcHBsaWNhdGlvblwvdm5kLm9wZW54bWxmb3JtYXRzLW9mZmljZWRvY3VtZW50LndvcmRwcm9jZXNzaW5nbWwuZG9jdW1lbnQiLCJhcHBsaWNhdGlvblwvdm5kLm9wZW54bWxmb3JtYXRzLW9mZmljZWRvY3VtZW50LndvcmRwcm9jZXNzaW5nbWwudGVtcGxhdGUiLCJhcHBsaWNhdGlvblwvdm5kLm1zLXdvcmQuZG9jdW1lbnQubWFjcm9FbmFibGVkLjEyIiwiYXBwbGljYXRpb25cL3ZuZC5tcy13b3JkLnRlbXBsYXRlLm1hY3JvRW5hYmxlZC4xMiIsImFwcGxpY2F0aW9uXC92bmQubXMtZXhjZWwiLCJhcHBsaWNhdGlvblwvdm5kLm9wZW54bWxmb3JtYXRzLW9mZmljZWRvY3VtZW50LnNwcmVhZHNoZWV0bWwuc2hlZXQiLCJhcHBsaWNhdGlvblwvdm5kLm9wZW54bWxmb3JtYXRzLW9mZmljZWRvY3VtZW50LnNwcmVhZHNoZWV0bWwudGVtcGxhdGUiLCJhcHBsaWNhdGlvblwvdm5kLm1zLWV4Y2VsLnNoZWV0Lm1hY3JvRW5hYmxlZC4xMiIsImFwcGxpY2F0aW9uXC92bmQubXMtZXhjZWwudGVtcGxhdGUubWFjcm9FbmFibGVkLjEyIiwiYXBwbGljYXRpb25cL3ZuZC5tcy1leGNlbC5hZGRpbi5tYWNyb0VuYWJsZWQuMTIiLCJhcHBsaWNhdGlvblwvdm5kLm1zLWV4Y2VsLnNoZWV0LmJpbmFyeS5tYWNyb0VuYWJsZWQuMTIiLCJhcHBsaWNhdGlvblwvdm5kLm1zLXBvd2VycG9pbnQiLCJhcHBsaWNhdGlvblwvdm5kLm9wZW54bWxmb3JtYXRzLW9mZmljZWRvY3VtZW50LnByZXNlbnRhdGlvbm1sLnByZXNlbnRhdGlvbiIsImFwcGxpY2F0aW9uXC92bmQub3BlbnhtbGZvcm1hdHMtb2ZmaWNlZG9jdW1lbnQucHJlc2VudGF0aW9ubWwudGVtcGxhdGUiLCJhcHBsaWNhdGlvblwvdm5kLm9wZW54bWxmb3JtYXRzLW9mZmljZWRvY3VtZW50LnByZXNlbnRhdGlvbm1sLnNsaWRlc2hvdyIsImFwcGxpY2F0aW9uXC92bmQubXMtcG93ZXJwb2ludC5hZGRpbi5tYWNyb0VuYWJsZWQuMTIiLCJhcHBsaWNhdGlvblwvdm5kLm1zLXBvd2VycG9pbnQucHJlc2VudGF0aW9uLm1hY3JvRW5hYmxlZC4xMiIsImFwcGxpY2F0aW9uXC92bmQubXMtcG93ZXJwb2ludC50ZW1wbGF0ZS5tYWNyb0VuYWJsZWQuMTIiLCJhcHBsaWNhdGlvblwvdm5kLm1zLXBvd2VycG9pbnQuc2xpZGVzaG93Lm1hY3JvRW5hYmxlZC4xMiIsInRleHRcL2NzdiJdLCJtaW1ldHlwZXNOb0RlZmF1bHRPcGVuIjpbImltYWdlXC9zdmcreG1sIiwiYXBwbGljYXRpb25cL3BkZiIsInRleHRcL3BsYWluIiwidGV4dFwvc3ByZWFkc2hlZXQiXSwiY29sbGFib3JhIjp7ImNvbnZlcnQtdG8iOnsiYXZhaWxhYmxlIjp0cnVlLCJlbmRwb2ludCI6IlwvY29vbFwvY29udmVydC10byJ9LCJoYXNNb2JpbGVTdXBwb3J0Ijp0cnVlLCJoYXNQcm94eVByZWZpeCI6ZmFsc2UsImhhc1RlbXBsYXRlU2F2ZUFzIjpmYWxzZSwiaGFzVGVtcGxhdGVTb3VyY2UiOnRydWUsImhhc1pvdGVyb1N1cHBvcnQiOnRydWUsInByb2R1Y3ROYW1lIjoiQ29sbGFib3JhIE9ubGluZSIsInByb2R1Y3RWZXJzaW9uIjoiMjIuMDUuMTUuMiIsInByb2R1Y3RWZXJzaW9uSGFzaCI6IjQ1OGFmZDIiLCJzZXJ2ZXJJZCI6IjM4MWE4MDAxIn0sImRpcmVjdF9lZGl0aW5nIjp0cnVlLCJ0ZW1wbGF0ZXMiOnRydWUsInByb2R1Y3ROYW1lIjoiTmV4dGNsb3VkIE9mZmljZSIsImNvbmZpZyI6eyJ3b3BpX3VybCI6Imh0dHBzOlwvXC9vZmZpY2UuZWR1Y3MtaG9zdGluZy5uZXQiLCJwdWJsaWNfd29waV91cmwiOiJodHRwczpcL1wvb2ZmaWNlLmVkdWNzLWhvc3RpbmcubmV0IiwiZGlzYWJsZV9jZXJ0aWZpY2F0ZV92ZXJpZmljYXRpb24iOiJ5ZXMiLCJlZGl0X2dyb3VwcyI6bnVsbCwidXNlX2dyb3VwcyI6bnVsbCwiZG9jX2Zvcm1hdCI6bnVsbCwidGltZW91dCI6MTV9fSwidGhlbWluZyI6eyJuYW1lIjoiTmV4dGNsb3VkIHwgRWR1Q1MiLCJ1cmwiOiJodHRwczpcL1wvd3d3LmRpcGYuZGUiLCJzbG9nYW4iOiJlaW4gc2ljaGVyZXIgT3J0IGZcdTAwZmNyIGFsbCBJaHJlIERhdGVuIiwiY29sb3IiOiIjRkFGQUZBIiwiY29sb3ItdGV4dCI6IiMwMDAwMDAiLCJjb2xvci1lbGVtZW50IjoiI2FhYWFhYSIsImNvbG9yLWVsZW1lbnQtYnJpZ2h0IjoiI2FhYWFhYSIsImNvbG9yLWVsZW1lbnQtZGFyayI6IiNGQUZBRkEiLCJsb2dvIjoiaHR0cHM6XC9cL2Nsb3VkLmVkdWNzLWhvc3RpbmcubmV0XC9hcHBzXC90aGVtaW5nXC9pbWFnZVwvbG9nbz91c2VTdmc9MSZ2PTEyIiwiYmFja2dyb3VuZCI6IiNGQUZBRkEiLCJiYWNrZ3JvdW5kLXBsYWluIjp0cnVlLCJiYWNrZ3JvdW5kLWRlZmF1bHQiOnRydWUsImxvZ29oZWFkZXIiOiJodHRwczpcL1wvY2xvdWQuZWR1Y3MtaG9zdGluZy5uZXRcL2FwcHNcL3RoZW1pbmdcL2ltYWdlXC9sb2dvP3VzZVN2Zz0xJnY9MTIiLCJmYXZpY29uIjoiaHR0cHM6XC9cL2Nsb3VkLmVkdWNzLWhvc3RpbmcubmV0XC9hcHBzXC90aGVtaW5nXC9pbWFnZVwvbG9nbz91c2VTdmc9MSZ2PTEyIn0sInVzZXJfc3RhdHVzIjp7ImVuYWJsZWQiOnRydWUsInN1cHBvcnRzX2Vtb2ppIjp0cnVlfSwid2VhdGhlcl9zdGF0dXMiOnsiZW5hYmxlZCI6dHJ1ZX19">
+					<input type="hidden" id="initial-state-core-versionHash" value="ImFjYjgyMWYxIg==">
+				<div class="wrapper">
+			<div class="v-align">
+									<header role="banner">
+						<div id="header">
+							<div class="logo"></div>
+						</div>
+					</header>
+								<main>
+					<h1 class="hidden-visually">
+						Nextcloud | EduCS					</h1>
+					<div class="guest-box wide">
+	<h2>Interner Serverfehler</h2>
+	<p>Der Server konnte die Anfrage nicht fertig stellen.</p>
+	<p>Sollte dies erneut auftreten, senden Sie bitte die nachfolgenden technischen Einzelheiten  an Ihren Server-Administrator.</p>
+	<p>Weitere Details können im Server-Protokoll gefunden werden.</p>
+
+	<h3>Technische Details</h3>
+	<ul>
+		<li>Entfernte Adresse: 195.37.189.82</li>
+		<li>Anfragekennung: sDQwySSgCZsBoGr23NeH</li>
+			</ul>
+
+	</div>
+				</main>
+                				<script nonce="b0l2TzFkVFdJNW5FMzdka2NPTktEMFkxQklWRmpidTB2bzBvS21DeGk2ND06MWNHc3U3TzlETUNYcDRjeUlOVStiaEJ0YmZOei85SGo5dHR2UkZPYXh2OD0=">
+					document.addEventListener("DOMContentLoaded", () => {
+						//split text
+						let el = document.querySelector(`label[for="user"]`);
+						if (el.innerText === "Account name or email") {
+							el.innerText = "Account name";
+						} else {
+							el.innerText = "Kontoname";
+						}
+					
+					});
+				</script>
+							</div>
+		</div>
+		<footer role="contentinfo">
+			<p class="info">
+				<a href="https://www.dipf.de" target="_blank" rel="noreferrer noopener" class="entity-name">Nextcloud | EduCS</a> – ein sicherer Ort für all Ihre Daten<br/><a href="https://www.dipf.de/de/impressum" class="legal" target="_blank" rel="noreferrer noopener">Impressum</a> · <a href="https://www.dipf.de/de/datenschutz" class="legal" target="_blank" rel="noreferrer noopener">Datenschutz</a>			</p>
+		</footer>
+	</body>
+</html>
