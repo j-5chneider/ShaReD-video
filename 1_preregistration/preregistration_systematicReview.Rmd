@@ -380,7 +380,7 @@ knitr::kable(table_sources) %>%
 
 </div> 
 
-_Put your text here._
+Leibniz Association, Germany
 
 
 ## Conflict of Interest
@@ -459,10 +459,10 @@ Given these advantages, the sharing and reusing of video research data in educat
 
 Despite the importance of this issue, there is limited understanding of the reasons behind the underdevelopment of sharing and reusing video research data in education. Existing investigations primarily focus on research data as a whole and only partially address the specific challenges related to video data. Additionally, the literature on video research data is scattered across various publication outlets, lacking a comprehensive and systematic examination of the barriers and facilitators of sharing and reusing video research data in education.
 
-To address this gap, we conduct a systematic review to identify and categorize the factors that contribute to the sharing or reusing of video research data in education. We will situate these factors within a "research ecosystem" framework (European Commission, 2018, p. 10), which encompasses the scientific community's context (e.g. incentives, norms, policies of scientific societies), available infrastructure (e.g. discipline specific data centers), the researchers themselves (e.g. awareness, skills), and their video research data (e.g. study design, vulnerable sample; see Fig. 1). By undertaking this review, we aim to enhance awareness and understanding of these factors, ultimately reducing barriers and expanding facilitators for sharing and reusing video research data in education.
+To address this gap, we conduct a systematic review to identify and categorize the factors that contribute to the sharing or reusing of video research data in education. We will situate these factors within a "research ecosystem" framework (European Commission, 2018, p. 10), which encompasses the scientific community's context (e.g. incentives, norms, policies of scientific societies), available infrastructure (e.g. discipline specific data centers), the researchers themselves (e.g. awareness, skills), and their research project (e.g. study design, vulnerable sample; see Fig. 1). By undertaking this review, we aim to enhance awareness and understanding of these factors, ultimately reducing barriers and expanding facilitators for sharing and reusing video research data in education.
 
 
-![](www/model.png){width=70%}
+![](www/model.jpg){width=70%}
 
 
 ## Research Questions
@@ -496,7 +496,7 @@ knitr::kable(table_sources) %>%
 </div> 
 
 1. What are barriers and facilitators in sharing and reusing video research data?
-2. Where can these factors be located in a system between context, infrastructure, researchers and data?
+2. Where can these factors be located in a system between context, infrastructure, researchers and research project?
 
 
 # Methods
@@ -549,7 +549,6 @@ We are looking for two types of documents:
 * Scientific publications: Publications on the topic of sharing and reusing (qualitative or video) research data.
 * Directives and surveys: Surveys/guidelines/recommendations on the topic of sharing and reusing (qualitative or video) research data.
 
-The latter are often part of documents addressing a broader topic (such as a survey on open science practices). Therefore we will 
 
 
 ### Scientific publications
@@ -564,7 +563,7 @@ __Inclusion:__
 
 __Exclusion:__
 
-* The data includes position data, map data, weather data, business data, ... (not humans)
+* The data includes position data, map data, weather data, business data, ... without addressing data recording humans
 * The document focuses government data
 
 
@@ -579,7 +578,7 @@ __Inclusion:__
 
 __Exclusion:__
 
-* The data includes position data, map data, weather data, business data, ... (not humans)
+* The data includes position data, map data, weather data, business data, ... without addressing data recording humans
 * The document focuses government data
 
 ## Sources of Search: List and Rationale
