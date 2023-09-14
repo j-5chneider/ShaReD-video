@@ -462,7 +462,7 @@ Despite the importance of this issue, there is limited understanding of the reas
 To address this gap, we conduct a systematic review to identify and categorize the factors that contribute to the sharing or reusing of video research data in education. We will situate these factors within a "research ecosystem" framework (European Commission, 2018, p. 10), which encompasses the scientific community's context (e.g. incentives, norms, policies of scientific societies), available infrastructure (e.g. discipline specific data centers), the researchers themselves (e.g. awareness, skills), and their research project (e.g. study design, vulnerable sample; see Fig. 1). By undertaking this review, we aim to enhance awareness and understanding of these factors, ultimately reducing barriers and expanding facilitators for sharing and reusing video research data in education.
 
 
-![](www/model.jpg){width=70%}
+![](../www/model.jpg){width=70%}
 
 
 ## Research Questions
