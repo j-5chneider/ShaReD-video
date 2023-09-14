@@ -550,9 +550,6 @@ We are looking for two types of documents:
 * Directives and surveys: Surveys/guidelines/recommendations on the topic of sharing and reusing (qualitative or video) research data.
 
 
-
-### Scientific publications
-
 __Inclusion:__
 
 * Theoretical as well as empirical 
@@ -566,20 +563,6 @@ __Exclusion:__
 * The data includes position data, map data, weather data, business data, ... without addressing data recording humans
 * The document focuses government data
 
-
-### Directives and surveys
-
-__Inclusion:__
-
-* The document includes statements about sharing or reusing research data
-* These statements concern qualitative data or video data
-* The data includes human subjects
-* The document mentions barriers or facilitators to sharing or reusing research data
-
-__Exclusion:__
-
-* The data includes position data, map data, weather data, business data, ... without addressing data recording humans
-* The document focuses government data
 
 ## Sources of Search: List and Rationale
 
@@ -839,7 +822,7 @@ knitr::kable(table_sources) %>%
   - Descriptions of the barriers and facilitators to sharing and reusing video research data
   - Statement about the relevance or size of impact of the factor
   - Reasoning as to _why_ these barriers or facilitators have an effect on sharing and reusing video research data or _how_ the mechanism of the effect comes about
-  - Where we assign the barrier or facilitator (context, infrastructure, researcher, data, other)? 
+  - Where we assign the barrier or facilitator (context, infrastructure, researcher, research project, other)? 
 
 
 ## Effect Size Transformation from Individual Studies
