@@ -1,0 +1,128 @@
+---
+title: "Barriers and facilitators to sharing and reusing video research data"
+subtitle: "Reproducible documentation of analyses"
+author:
+  - name: "[blinded]"
+    email: ""
+    affiliation: "[blinded]"
+    correspondence: true
+date: "`r Sys.Date()`" # inserts the date of compiling
+editor: source
+execute:
+  echo: true
+  warning: false
+  message: false
+  cache: false # true will prevent embed-resources
+format: 
+  html:
+    theme: cerulean
+    fontsize: 0.85em
+    toc: true
+    toc-location: left
+    toc-depth: 4
+    embed-resources: true # will make standalone html file
+    code-fold: true
+    code-tools: true
+    code-link: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# loading packages
+
+```{r}
+library(tidyverse)
+library(rio)
+library(xfun)
+library(here)
+library(kableExtra)
+```
+
+# Analyses in the Introduction section
+
+## Frequency of data sharing in video studies
+
+* The following __search query__ was applied in [Web of Science](https://www.webofscience.com) on September 6 2023: `("video study" OR "video data") AND (classroom OR teach*)` in "Topic" (Searches title, abstract, author keywords, and Keywords Plus).
+* We have further narrowed the __publication years__ to 2000 - 2023, as digital archiving infrastructures were increasingly established from 2000 onwards.
+  
+::: {.callout-note appearance="minimal"}
+## This resulted in 285 documents.
+Click here to `r embed_file(here("3_data/1_Frequency_of_data_sharing_WoS_export.csv"), text="download the exported results")`.
+:::
+
+  
+* __Inclusion criteria__ for subsequent screening of the results
+  - The document describes an empirical study
+  - The study uses video data to investigate an educational topic
+  - The document describes primary research (does not reuse video data)
+* __Exclusion criteria__
+  - The document is a methods paper
+  - The study reuses video data
+
+Strategy of synthesis:
+
+* Duplicates of research projects (several publications from one video data set) will be synthesized to one case. Within the case we will investigate each document.
+
+
+```{r}
+freq_screened <- rio::import(file=here("3_data/2_Frequency_of_data_sharing_screened_rayyan.csv")) # this is articles.csv (I renamed the file before)
+
+freq_screened <- freq_screened %>%
+  dplyr::mutate(excl_reason = str_extract(.$notes, "RAYYAN-EXCLUSION-REASONS:.*?(\\||$)"), # extract exclusion reasons
+                labels = str_extract(.$notes, "RAYYAN-LABELS:.*?(\\||$)"),       # extract labels coded
+                decision_c1 = str_extract(.$notes, "Jürgen\"\"=>\"\".*?\"\""),    # extract decision from coder 1 -> CHANGE NAME!
+                decision_c2 = str_extract(.$notes, "Juergen\"\"=>\"\".*?\"\"")) %>% # extract decision from coder 2 -> CHANGE NAME!
+  # remove prefixes or recode
+  dplyr::mutate(excl_reason = str_remove_all(excl_reason, "RAYYAN-EXCLUSION-REASONS:\\s"),
+                labels = str_remove_all(labels, "RAYYAN-LABELS:\\s|\\s\\|"),
+                decision_c1 = case_when(                                      
+                  str_detect(decision_c1, "Excluded") ~ "Excluded",           
+                  str_detect(decision_c1, "Included") ~ "Included",           
+                  str_detect(decision_c1, "Maybe") ~ "Maybe"),                
+                decision_c2 = case_when(                                      
+                  str_detect(decision_c2, "Excluded") ~ "Excluded",           
+                  str_detect(decision_c2, "Included") ~ "Included",           
+                  str_detect(decision_c2, "Maybe") ~ "Maybe"),
+                agreement = case_when(        # is there agreement on the decision?
+                  decision_c1 == decision_c2 ~ 1,
+                  TRUE ~ 0)
+  )
+
+
+
+# crosstab of coding results
+table(freq_screened$decision_c1, freq_screened$decision_c2)
+table(freq_screened$decision_c1)
+table(freq_screened$decision_c2)
+
+# show documents with disagreeing decision
+freq_screened |>
+  dplyr::filter(agreement == 0) |>    # selecting the documents with disagreement 
+  dplyr::select(authors, title, year) |> # which information should be displayed?
+  kbl()
+
+# write table with clean data set to data folder
+rio::export(freq_screened, file = here("3_data/3_Frequency_of_data_sharing_screened_clean.csv"))
+```
+  
+::: {.callout-note appearance="minimal"}
+## This resulted in # documents.
+Click here to `r embed_file(here("3_data/3_Frequency_of_data_sharing_screened_clean.csv"), text="download the screened results")`.
+:::
+
+
+
+  
+We then coded: 
+
+* Whether authors made a statement about the accessibility of the data
+* Whether the openness include public access, restricted access, no access, access upon request
+* Whether the authors use established infrastructure (repositories or research data centers)
+* Whether the journal mandates authors to make a statement about the accessibility of the data
+
+
+# R Version & Environment
+
+```{r}
+sessionInfo()
+```
