@@ -13,7 +13,7 @@ library(rio)
 ## Insert Search String here!
 # For tips on how to create a good search string for google scholar check out
 # http://musingsaboutlibrarianship.blogspot.com/2015/10/6-common-misconceptions-when-doing.html
-searchstring <- "intitle:data intitle:(share | open | FAIR | reuse | re-use | manage | secondary) (video | qualitative)"
+searchstring <- "intitle:Daten intitle:(teilen | offen | öffnen | bereitstellen | open | FAIR | nachnutzen | managen | sekundärdaten) (Video | qualitativ)"
 
 ## Which range of results should be exported?
 # Please provide in increments of 10
@@ -54,17 +54,27 @@ for (i in (seq(from = from_result, to = to_result, by = 10)-1)) { # a loop to sc
     add_row(authors = gsub("^(.*?)\\W+-\\W+.*", "\\1", 
                            rvest::html_text(rvest::html_elements(page, ".gs_a")), 
                            perl = TRUE)[j],
-            year = gsub("^.*(\\d{4}).*", "\\1", 
-                        rvest::html_text(rvest::html_elements(page, ".gs_a")),
-                        perl = TRUE)[j],
+            year = ifelse(str_detect(rvest::html_text(rvest::html_elements(page, ".gs_a"))[j],
+                                     "(\\d{4})"),   # if year is detected
+                          gsub("^.*(\\d{4}).*", "\\1", # then extract year
+                               rvest::html_text(rvest::html_elements(page, ".gs_a")),
+                               perl = TRUE)[j],
+                          as.character(NA)),        # else missing value
             title = rvest::html_text(rvest::html_elements(page, ".gs_rt"))[j],
-            journal = gsub("^.*((?<=-\\s)(.*)(?=,+)).*", "\\1", 
-                           rvest::html_text(rvest::html_elements(page, ".gs_a")),
-                           perl = TRUE)[j],
+            journal = ifelse(str_detect(rvest::html_text(rvest::html_elements(page, ".gs_a"))[j],
+                                        "(\\d{4})"), # if year is detected
+                             gsub("^.*((?<=-\\s)(.*)(?=,+)?).*", "\\1",  # then
+                                  rvest::html_text(rvest::html_elements(page, ".gs_a")),
+                                  perl = TRUE)[j],
+                             gsub("^.*((?<=-\\s)(.*)).*$", "\\1",       # else
+                                  rvest::html_text(rvest::html_elements(page, ".gs_a")),
+                                  perl = TRUE)[j]),
             abstract = rvest::html_text(rvest::html_nodes(page, ".gs_rs"))[j]
             )
   }
 }
+
+
 
 # clean up the messy titles
 references <- references |>
