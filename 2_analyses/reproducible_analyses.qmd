@@ -54,8 +54,8 @@ library(kableExtra)
   
 ::: {.column-margin}
 ::: {.callout-note appearance="minimal"}
-## This resulted in `r nrow(rio::import(file=here("3_data/1_Frequency_of_data_sharing_WoS_export.csv")))` documents to be screened.
-Click here to `r embed_file(here("3_data/1_Frequency_of_data_sharing_WoS_export.csv"), text="download the exported results")`.
+## This resulted in `r nrow(rio::import(file=here("3_data/1_from_Introduction/1_Frequency_of_data_sharing_WoS_export.csv")))` documents to be screened.
+Click here to `r embed_file(here("3_data/1_from_Introduction/1_Frequency_of_data_sharing_WoS_export.csv"), text="download the exported results")`.
 :::
 :::
 
@@ -91,7 +91,7 @@ Click here to `r embed_file(here("3_data/1_Frequency_of_data_sharing_WoS_export.
 
 #### Data wrangling
 ```{r}
-freq_screened <- rio::import(file=here("3_data/2_Frequency_of_data_sharing_screened_rayyan.csv")) # this is articles.csv (I renamed the file before)
+freq_screened <- rio::import(file=here("3_data/1_from_Introduction/2_Frequency_of_data_sharing_screened_rayyan.csv")) # this is articles.csv (I renamed the file before)
 
 freq_screened <- freq_screened %>%
   dplyr::mutate(excl_reason = str_extract(.$notes, "RAYYAN-EXCLUSION-REASONS:.*?(\\||$)"), # extract exclusion reasons
@@ -138,14 +138,14 @@ freq_screened |>
 ::: {.column-margin}
 ::: {.callout-note appearance="minimal"}
 ## This resulted in `r nrow(freq_screened |> dplyr::filter(decision_c1 == "Included" & decision_c2 == "Included"))` documents both coders rated as "Included".
-Click here to `r embed_file(here("3_data/3_Frequency_of_data_sharing_screened_clean.csv"), text="download the screened results")`.
+Click here to `r embed_file(here("3_data/1_from_Introduction/3_Frequency_of_data_sharing_screened_clean.csv"), text="download the screened results")`.
 :::
 :::
 
 Write table to folder with clean data set
 ```{r}
 # write table with clean data set to data folder
-rio::export(freq_screened, file = here("3_data/3_Frequency_of_data_sharing_screened_clean.csv"))
+rio::export(freq_screened, file = here("3_data/1_from_Introduction/3_Frequency_of_data_sharing_screened_clean.csv"))
 ```
   
 
