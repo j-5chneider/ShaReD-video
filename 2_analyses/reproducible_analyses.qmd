@@ -19,7 +19,7 @@ format:
     fontsize: 0.85em
     toc: true
     toc-location: left
-    toc-depth: 4
+    toc-depth: 2
     embed-resources: true # will make standalone html file
     code-fold: true
     code-tools: true
@@ -28,7 +28,10 @@ editor_options:
   chunk_output_type: console
 ---
 
-# loading packages
+\
+\
+
+_loading packages_
 
 ```{r}
 library(tidyverse)
@@ -38,18 +41,32 @@ library(here)
 library(kableExtra)
 ```
 
+\
+
 # Analyses in the Introduction section
 
 ## Frequency of data sharing in video studies
 
+### Literature search
+
 * The following __search query__ was applied in [Web of Science](https://www.webofscience.com) on September 6 2023: `("video study" OR "video data") AND (classroom OR teach*)` in "Topic" (Searches title, abstract, author keywords, and Keywords Plus).
 * We have further narrowed the __publication years__ to 2000 - 2023, as digital archiving infrastructures were increasingly established from 2000 onwards.
   
+::: {.column-margin}
 ::: {.callout-note appearance="minimal"}
-## This resulted in 285 documents.
+## This resulted in `r nrow(rio::import(file=here("3_data/1_Frequency_of_data_sharing_WoS_export.csv")))` documents to be screened.
 Click here to `r embed_file(here("3_data/1_Frequency_of_data_sharing_WoS_export.csv"), text="download the exported results")`.
 :::
+:::
 
+\
+\
+
+### Screening
+
+::: {.panel-tabset}
+
+#### Criteria
   
 * __Inclusion criteria__ for subsequent screening of the results
   - The document describes an empirical study
@@ -59,11 +76,20 @@ Click here to `r embed_file(here("3_data/1_Frequency_of_data_sharing_WoS_export.
   - The document is a methods paper
   - The study reuses video data
 
-Strategy of synthesis:
+#### Strategy of synthesis
 
 * Duplicates of research projects (several publications from one video data set) will be synthesized to one case. Within the case we will investigate each document.
 
+:::
 
+\
+\
+
+### Intermediate Result of screening
+
+::: {.panel-tabset}
+
+#### Data wrangling
 ```{r}
 freq_screened <- rio::import(file=here("3_data/2_Frequency_of_data_sharing_screened_rayyan.csv")) # this is articles.csv (I renamed the file before)
 
@@ -87,38 +113,63 @@ freq_screened <- freq_screened %>%
                   decision_c1 == decision_c2 ~ 1,
                   TRUE ~ 0)
   )
+```
 
 
+#### Crosstab: Intermediate results
+```{r}
 
 # crosstab of coding results
-table(freq_screened$decision_c1, freq_screened$decision_c2)
-table(freq_screened$decision_c1)
-table(freq_screened$decision_c2)
+table(freq_screened$decision_c1, freq_screened$decision_c2) 
+```
 
+
+#### Documents with disagreement
+```{r}
 # show documents with disagreeing decision
 freq_screened |>
   dplyr::filter(agreement == 0) |>    # selecting the documents with disagreement 
   dplyr::select(authors, title, year) |> # which information should be displayed?
   kbl()
+```
 
+:::
+
+::: {.column-margin}
+::: {.callout-note appearance="minimal"}
+## This resulted in `r nrow(freq_screened |> dplyr::filter(decision_c1 == "Included" & decision_c2 == "Included"))` documents both coders rated as "Included".
+Click here to `r embed_file(here("3_data/3_Frequency_of_data_sharing_screened_clean.csv"), text="download the screened results")`.
+:::
+:::
+
+Write table to folder with clean data set
+```{r}
 # write table with clean data set to data folder
 rio::export(freq_screened, file = here("3_data/3_Frequency_of_data_sharing_screened_clean.csv"))
 ```
   
-::: {.callout-note appearance="minimal"}
-## This resulted in # documents.
-Click here to `r embed_file(here("3_data/3_Frequency_of_data_sharing_screened_clean.csv"), text="download the screened results")`.
-:::
 
 
+\
+\
 
-  
+### Coding
+
+::: {.panel-tabset}
+
+#### Coding dimensions  
+
 We then coded: 
 
-* Whether authors made a statement about the accessibility of the data
-* Whether the openness include public access, restricted access, no access, access upon request
-* Whether the authors use established infrastructure (repositories or research data centers)
-* Whether the journal mandates authors to make a statement about the accessibility of the data
+* Whether authors made a __statement about the accessibility__ of the data
+* Whether the data is __accessible for reuse__ by researchers
+* Whether the authors use __established infrastructure__ (repositories or research data centers) as opposed to project website
+* Whether the __journal mandates authors__ to make a statement about the accessibility of the data
+
+:::
+
+\
+\
 
 
 # R Version & Environment
