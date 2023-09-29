@@ -47,6 +47,7 @@ for (i in (seq(from = from_result, to = to_result, by = 10)-1)) { # a loop to sc
   
   # scrape this juicy results page
   page <- read_html(url) 
+  Sys.sleep(1)
   
   for (j in 1:10) { # loop over all 10 results
   # extract certain details from the result
@@ -73,7 +74,6 @@ for (i in (seq(from = from_result, to = to_result, by = 10)-1)) { # a loop to sc
             )
   }
 }
-
 
 
 # clean up the messy titles
