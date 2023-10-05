@@ -2,10 +2,10 @@
 title: "Preregistration"
 subtitle: "Barriers and facilitators to sharing and reusing video research data"
 author:
-- affiliation: "DIPF | Leibniz institute for research and information in education"
-  email: ju.schneider@dipf.de
-  name: Jürgen Schneider
-  url: https://orcid.org/0000-0002-3772-4198
+- affiliation: "[blinded]"
+  email: [blinded]
+  name: [blinded]
+  url: [blinded]
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -177,8 +177,8 @@ knitr::kable(table_sources) %>%
 
 </div> 
 
-* Starting: 26. June 2023
-* Anticipated completion date: 15. October 2023 (without manuscript)
+* Starting: September 1, 2023
+* Anticipated completion date: December 20, 2023 (without manuscript)
 
 
 
@@ -277,12 +277,7 @@ knitr::kable(table_sources) %>%
 
 </div> 
 
-* corresponding author
-    - name: Jürgen Schneider
-    - affiliation: "DIPF | Leibniz institute for research and information in education"
-    - email: ju.schneider@dipf.de
-    - url: https://orcid.org/0000-0002-3772-4198
-
+[blinded for review]
 ## Collaborators
 
 <button data-toggle="collapse" data-target="#colla">more info</button>
@@ -309,7 +304,7 @@ knitr::kable(table_sources) %>%
 
 </div> 
 
-_Put your text here._
+[blinded for review]
 
 
 ## Amendments to previous versions
@@ -380,7 +375,7 @@ knitr::kable(table_sources) %>%
 
 </div> 
 
-Leibniz Association, Germany
+[blinded]
 
 
 ## Conflict of Interest
@@ -556,11 +551,13 @@ __Inclusion:__
 * Main focus of the document is sharing or reusing research data
 * The document focuses on qualitative data or video data
 * The data includes human subjects
-* The document mentions barriers or facilitators to sharing or reusing research data
+* The document explicitly discusses barriers or facilitators to sharing or reusing research data as (one of) the _main topic(s)_ of the paper
 
 __Exclusion:__
 
 * The data includes position data, map data, weather data, business data, ... without addressing data recording humans
+* Barriers or facilitators to sharing or reusing research data can only be implicitly inferred 
+* Barriers or facilitators to sharing or reusing research data are explicitly mentioned
 * The document focuses government data
 
 
@@ -605,13 +602,14 @@ knitr::kable(table_sources) %>%
 
 For each of the two types of documents we conduct searches in the following sources:
 
-* Web of Science
-* ERIC
-* first 100 results of google scholar (to check for grey literature)
+* Web of Science [English search]
+* ERIC [English search]
+* FIS Bildung [German search]
+* first 100 results of google scholar (to check for grey literature)  [English & German search]
 
 For the directives and surveys we additionally conduct
 
-* google search
+* google search  [English & German search]
 
 Due to our language background we conduct each search in English as well as German.
 
@@ -662,6 +660,14 @@ Terms between columns are connected via AND, while terms within columns are conn
 |            | secondary  |              |
 
 
+For copy and paste reasons, here is the full search query as one string with the additional search options (such as boolean operators) of each data base:  
+
+* In [Web of Science](https://www.webofscience.com/wos/woscc/advanced-search): `(TI=(data AND (shar*  OR open*  OR FAIR* OR reus* OR re-us* OR manage* OR secondary))) AND ALL=(video* OR qualitative)`
+* In [ERIC](https://eric.ed.gov/): `title:(data AND (shar*  OR open*  OR FAIR* OR reus* OR re-us* OR manage* OR secondary)) AND (video* OR qualitative)`
+* In [FIS Bildung](https://www.fachportal-paedagogik.de/literatur/erweiterte_suche.html): `((Titel: Daten) und (Titel: teil* oder offen* oder öffn* oder bereitstell* oder open* oder FAIR* oder nachnutz* oder manage*`<br />`oder sekundär*) ) und (Freitext: Video* oder qualitativ*)`
+* In [google scholar](https://scholar.google.com) (English): `intitle:data intitle:(share | open | FAIR | reuse | re-use | manage | secondary) (video | qualitative)`
+* In [google scholar](https://scholar.google.com) (German): `intitle:Daten intitle:(teilen | offen | öffnen | bereitstellen | open | FAIR | nachnutzen | managen | sekundärdaten) (Video | qualitativ)`
+
 ### Directives and surveys
 
 Terms between columns are connected via AND, while terms within columns are connected via OR.
@@ -673,6 +679,14 @@ Terms between columns are connected via AND, while terms within columns are conn
 | "open data"        | "position paper"  |
 | "FAIR data"        | recommendation*   |
 |                    | checklist*        |
+
+For copy and paste reasons, here is the full search query as one string with the additional search options (such as boolean operators) of each data base:  
+
+* In [Web of Science](https://www.webofscience.com/wos/woscc/advanced-search): `(TI=("open practice" OR "open science" OR "open data" OR "FAIR data") AND ALL=(survey OR guideline* OR "position paper" OR recommendation* OR checklist*)`
+* In [ERIC](https://eric.ed.gov/): `title:("open practice" OR "open science" OR "open data" OR "FAIR data") AND (survey OR guideline* OR "position paper" OR recommendation* OR checklist*)`
+* In [FIS Bildung](https://www.fachportal-paedagogik.de/literatur/erweiterte_suche.html): `(Titel: "OPEN PRACTICE" oder "OFFENE PRAXIS" oder "OPEN SCIENCE" oder "OFFENE WISSENSCHAFT" oder "OPEN DATA" oder "OFFENE DATEN"`<br />`oder "FAIR DATA") und (Freitext: UMFRAGE oder LEITFADEN* oder POSITIONSPAPIER oder EMPFEHLUNG* oder CHECKLISTE*)`
+* In [google scholar](https://scholar.google.com) (English): `intitle:("open practice" | "open science" | "open data" | "FAIR data") (survey | guideline | "position paper" | recommendation OR checklist)`
+* In [google scholar](https://scholar.google.com) (German): `intitle:("OPEN PRACTICE" | "OFFENE PRAXIS" | "OPEN SCIENCE" | "OFFENE WISSENSCHAFT" | "OPEN DATA" | "OFFENE DATEN"`<br />`| "FAIR DATA") (UMFRAGE | LEITFADEN | POSITIONSPAPIER | EMPFEHLUNG | CHECKLISTE)`
 
 
 ## Data Management Tools Used
@@ -702,7 +716,7 @@ knitr::kable(table_sources) %>%
 
 </div> 
 
-* Screening and coding: rayyan.ai or asreview.nl
+* Screening and coding: rayyan.ai
 
 
 
