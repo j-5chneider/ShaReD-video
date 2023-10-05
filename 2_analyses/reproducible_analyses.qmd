@@ -39,11 +39,12 @@ library(rio)
 library(xfun)
 library(here)
 library(kableExtra)
+library(DiagrammeR)
 ```
 
 \
 
-# Analyses in the Introduction section
+# Analysis in the Introduction section
 
 ## Frequency of data sharing in video studies
 
@@ -170,6 +171,52 @@ We then coded:
 
 \
 \
+
+# Analysis
+
+The procedure was carried out as in the [preregistration]().  
+  
+* Duplicates deleted: 54
+
+## Screening
+
+The _first path_ that leads to "Exclude" will be coded as exclusion reason.
+
+```{r}
+DiagrammeR::grViz("digraph {
+
+# initiate graph
+graph [layout = dot, rankdir = LR, label = 'Flowchart hierarchical coding\n\n',labelloc = t]
+
+# global node settings
+node [shape = rectangle, style = filled, fillcolor = Linen]
+
+# label nodes
+screening [label = 'Screening\ndocuments', shape = folder]
+share_reuse [label = 'topic is\nsharing/\nreusing\ndata', shape = diamond, fillcolor = Beige]
+quali_video [label = 'addresses\nqualitative/\nvideo data', shape = diamond, fillcolor = Beige]
+human [label = 'includes\nhuman\nsubjects', shape = diamond, fillcolor = Beige]
+government [label = 'does not\naddress\ngovernment\ndata', shape = diamond, fillcolor = Beige]
+barrier_facilitator [label = 'addresses\nbarriers\nfacilitators', shape = diamond, fillcolor = Beige]
+exclude [label = 'Decision:\nExclude', fillcolor = '#e04d38']
+include [label= 'Decision:\nInclude', fillcolor = '#7AAD7B']
+
+# edge definitions with the node IDs
+screening -> share_reuse
+share_reuse -> quali_video [label = 'yes']
+quali_video ->  human  [label = 'yes']
+human -> government [label = 'yes']
+government -> barrier_facilitator [label = 'yes']
+barrier_facilitator-> include [label = 'yes']
+share_reuse -> exclude [label = 'no']
+quali_video -> exclude [label = 'no']
+human -> exclude [label = 'no']
+government -> exclude [label = 'no']
+barrier_facilitator -> exclude [label = 'no']
+}")
+```
+
+
 
 
 # R Version & Environment
