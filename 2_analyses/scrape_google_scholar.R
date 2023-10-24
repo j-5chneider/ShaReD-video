@@ -13,7 +13,7 @@ library(rio)
 ## Insert Search String here!
 # For tips on how to create a good search string for google scholar check out
 # http://musingsaboutlibrarianship.blogspot.com/2015/10/6-common-misconceptions-when-doing.html
-searchstring <- "intitle:Daten intitle:(teilen | offen | öffnen | bereitstellen | open | FAIR | nachnutzen | managen | sekundärdaten) (Video | qualitativ)"
+searchstring <- 'intitle:("OPEN PRACTICE" | "OFFENE PRAXIS" | "OPEN SCIENCE" | "OFFENE WISSENSCHAFT" | "OPEN DATA" | "OFFENE DATEN" | "FAIR DATA") (UMFRAGE | LEITFADEN | POSITIONSPAPIER | EMPFEHLUNG | CHECKLISTE)'
 
 ## Which range of results should be exported?
 # Please provide in increments of 10
@@ -64,7 +64,7 @@ for (i in (seq(from = from_result, to = to_result, by = 10)-1)) { # a loop to sc
             title = rvest::html_text(rvest::html_elements(page, ".gs_rt"))[j],
             journal = ifelse(str_detect(rvest::html_text(rvest::html_elements(page, ".gs_a"))[j],
                                         "(\\d{4})"), # if year is detected
-                             gsub("^.*((?<=-\\s)(.*)(?=,+)?).*", "\\1",  # then
+                             gsub("^.*((?<=-\\s)(.*)(?=,+)).*", "\\1",  # then
                                   rvest::html_text(rvest::html_elements(page, ".gs_a")),
                                   perl = TRUE)[j],
                              gsub("^.*((?<=-\\s)(.*)).*$", "\\1",       # else
@@ -85,4 +85,4 @@ references <- references |>
 
 ## Export the data set to the working directory as CSV
 # This CSV is compatible for import to Rayyan and ASReview
-rio::export(references, "references_googleScholar.csv")
+rio::export(references, "3_data/2_systematic_Review/references_googleScholar_directives_DE.csv")
