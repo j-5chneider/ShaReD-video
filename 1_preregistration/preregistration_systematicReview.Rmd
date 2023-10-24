@@ -557,8 +557,9 @@ __Exclusion:__
 
 * The data includes position data, map data, weather data, business data, ... without addressing data recording humans
 * Barriers or facilitators to sharing or reusing research data can only be implicitly inferred 
-* Barriers or facilitators to sharing or reusing research data are explicitly mentioned
+* Barriers or facilitators to sharing or reusing research data are explicitly mentioned, but are not the _main topic(s)_ of the paper
 * The document focuses government data
+* The document originates from health science.
 
 
 ## Sources of Search: List and Rationale
